@@ -1,0 +1,12 @@
+[package]
+name = "kojimaman"
+version = "0.1.0"
+authors = ["Alec Burgdorf <aeburgd@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tiny_die = "0.2.1"
+text_io = "0.1.8"
+colored = "1.9.2"
