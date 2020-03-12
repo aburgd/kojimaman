@@ -9,4 +9,3 @@ edition = "2018"
 [dependencies]
 tiny_die = "0.2.1"
 text_io = "0.1.8"
-colored = "1.9.2"

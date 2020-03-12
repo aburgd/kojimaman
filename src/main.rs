@@ -1,4 +1,3 @@
-use colored::*;
 use std::collections::HashMap;
 use std::fmt;
 use text_io::read;
@@ -82,10 +81,10 @@ fn main() {
         println!("{}: {}", true_category, true_name);
     } else {
         let mut all_names: Names = find_all_names(&personal, &kojima, &conditions);
-        println!("{}", "True Name\n=========".bold());
+        println!("{}", "True Name\n=========");
         println!("{}: {}\n", true_category, true_name);
         all_names.remove(&true_category);
-        println!("\n{}", "Alternates\n==========".bold());
+        println!("\n{}", "Alternates\n==========");
         for name in all_names {
             println!("{}: {}", name.0, name.1);
         }
@@ -179,64 +178,58 @@ fn section_how_many_names() -> u8 {
 // Section 2
 fn section_personal_information() -> Information {
     let mut personal_information: Information = HashMap::new();
-    println!("{} ", "What is your full name?".bold());
+    println!("{} ", "What is your full name?");
     personal_information.insert("full_name".to_string(), read!("{}\r\n"));
-    println!(
-        "{} ",
-        "What is your occupation? Summarize in one -er verb.".bold()
-    );
+    println!("{} ", "What is your occupation? Summarize in one -er verb.");
     personal_information.insert("one_word_occupation".to_string(), read!("{}\r\n"));
     println!(
         "{} ",
-        "What was your first pet’s specific species/breed? If you've never had a pet, please answer with an animal you wish you owned.".bold()
+        "What was your first pet’s specific species/breed? If you've never had a pet, please answer with an animal you wish you owned."
     );
     personal_information.insert("first_pet_breed".to_string(), read!("{}\r\n"));
     println!(
         "{} ",
-        "What’s your most embarrassing childhood memory? Summarise it with 2 words.".bold()
+        "What’s your most embarrassing childhood memory? Summarise it with 2 words."
     );
     personal_information.insert("two_word_memory".to_string(), read!("{}\r\n"));
     println!(
         "{} ",
-        "What is the object you'd least like to be stabbed by?".bold()
+        "What is the object you'd least like to be stabbed by?"
     );
     personal_information.insert("least_like_stabbed".to_string(), read!("{}\r\n"));
     println!(
         "{} ",
-        "What is something you're good at? Summarize in one -ing verb.".bold()
+        "What is something you're good at? Summarize in one -ing verb."
     );
     personal_information.insert("good_at".to_string(), read!("{}\r\n"));
     println!(
         "{} ",
-        "How many carrots do you believe you could eat in one sitting, if someone, like, forced you to eat as many carrots as possible?".bold()
+        "How many carrots do you believe you could eat in one sitting, if someone, like, forced you to eat as many carrots as possible?"
     );
     personal_information.insert("carrots_one_sitting".to_string(), read!("{}\r\n"));
-    println!("{} ", "What is your greatest intangible fear?".bold());
+    println!("{} ", "What is your greatest intangible fear?");
     personal_information.insert("intangible_fear".to_string(), read!("{}\r\n"));
-    println!("{} ", "What is your greatest tangible fear?".bold());
+    println!("{} ", "What is your greatest tangible fear?");
     personal_information.insert("tangible_fear".to_string(), read!("{}\r\n"));
     println!(
         "{} ",
-        "What is the last thing you did before starting this worksheet?".bold()
+        "What is the last thing you did before starting this worksheet?"
     );
     personal_information.insert("last_thing".to_string(), read!("{}\r\n"));
     println!(
         "{} ",
-        "In one word, what condition is your body currently in?".bold()
+        "In one word, what condition is your body currently in?"
     );
     personal_information.insert("body_condition".to_string(), read!("{}\r\n"));
-    println!("{} ", "What is your favorite state of matter?".bold());
+    println!("{} ", "What is your favorite state of matter?");
     personal_information.insert("favorite_state_matter".to_string(), read!("{}\r\n"));
-    println!(
-        "{} ",
-        "What is a word your name sort of sounds like?".bold()
-    );
+    println!("{} ", "What is a word your name sort of sounds like?");
     personal_information.insert("name_sounds_like".to_string(), read!("{}\r\n"));
-    println!("{} ", "What is your Zodiac sign?".bold());
+    println!("{} ", "What is your Zodiac sign?");
     personal_information.insert("zodiac".to_string(), read!("{}\r\n"));
     println!(
         "{} ",
-        "If you could define your personality in one word, what would it be?".bold()
+        "If you could define your personality in one word, what would it be?"
     );
     personal_information.insert("one_word_personality".to_string(), read!("{}\r\n"));
     return personal_information;
@@ -247,32 +240,29 @@ fn section_kojima_information() -> Information {
     let mut kojima_information: Information = HashMap::new();
     println!(
         "{} ",
-        "Who is your favorite film character? Must be played by Kurt Russell.".bold()
+        "Who is your favorite film character? Must be played by Kurt Russell."
     );
     kojima_information.insert("favorite_kurt_russell".to_string(), read!("{}\r\n"));
     println!(
         "{} ",
-        "What is the last word of the title of your favorite Kubrick film?".bold()
+        "What is the last word of the title of your favorite Kubrick film?"
     );
     kojima_information.insert("favorite_kubrick_film".to_string(), read!("{}\r\n"));
     println!(
         "{} ",
-        "What is the first word in the title of your favorite Joy Division album?".bold()
+        "What is the first word in the title of your favorite Joy Division album?"
     );
     kojima_information.insert("favorite_joy_division".to_string(), read!("{}\r\n"));
-    println!(
-        "{} ",
-        "What is a scientific term you picked up recently?".bold()
-    );
+    println!("{} ", "What is a scientific term you picked up recently?");
     kojima_information.insert("recent_scientfic_term".to_string(), read!("{}\r\n"));
     println!(
         "{} ",
-        "What is a piece of military hardware you think looks cool, even though war is bad?".bold()
+        "What is a piece of military hardware you think looks cool, even though war is bad?"
     );
     kojima_information.insert("cool_military_war_bad".to_string(), read!("{}\r\n"));
     println!(
         "{} ",
-        "What is something you'd enjoy watching Mads Mikkelsen do? Summarize in one word.".bold()
+        "What is something you'd enjoy watching Mads Mikkelsen do? Summarize in one word."
     );
     kojima_information.insert("mads_mikkelsen_amazing".to_string(), read!("{}\r\n"));
     return kojima_information;
