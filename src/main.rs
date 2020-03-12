@@ -85,7 +85,7 @@ fn main() {
         println!("{}", "True Name\n=========".bold());
         println!("{}: {}\n", true_category, true_name);
         all_names.remove(&true_category);
-        println!("{}", "Alternates\n==========".bold());
+        println!("\n{}", "Alternates\n==========".bold());
         for name in all_names {
             println!("{}: {}", name.0, name.1);
         }
